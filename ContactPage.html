@@ -1,0 +1,95 @@
+<!--
+Your contact page must:
+
+o Allow users to book appointment for a private cooking lesson
+
+o Allow users to choose how they prefer to be contacted (by phone or 
+e-mail). Ensure that the e-mail is a valid Aston University e-mail and
+ that is confirmed (i.e., issued twice).
+
+ o Allow users to select a future date for the appointment
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!--navigation menu allow for constant simple navigation throughout the pages-->
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="title"><p>Fusion Kitchen</p></div>
+            <ul>
+              <li><a href="index.html" ><img src="images/Home.png" alt="picture of house" class="icon">Home Page</a></li>
+              <li><a href="RecipePage.html"><img src="images/Recipe.png" alt="picture of house" class="icon">Recipe Page</a></li>
+              <li><a href="ContactPage.html" id="currentPage"><img src="images/Contact.png" alt="picture of house" class="icon">Contact page</a></li>
+  </ul> </div> </nav>  
+
+  <!--current nav menu tells you current page-->
+  <header class=" main-header">
+    <p>Contact</p>
+  </header>
+
+  <!--this decides what goes on the background below the nav bar-->
+  <main id="contact-background">
+    <p id="title">Fusion Kitchen booking form</p>
+    <p id="briefing">complete this survey to book a private cooking session</p>
+
+        <!--this contains the form that you will have to fill out-->
+  <div id="contact-form">
+<form onsubmit="return validateForm()">
+
+  <!--this is the enter name part-->
+  <fieldset>
+    <label class="subheading">*Name</label>
+    <input type="text" placeholder="Enter your name" class="text-input" required>
+  </fieldset>
+
+  <!--enter email part-->
+  <fieldset>
+    <label class="subheading">*Aston Email</label>
+    <input type="email" placeholder="Enter your Email" class="text-input" required id="email">
+  </fieldset>
+
+  <!--confirmation of email-->
+  <fieldset>
+    <label class="subheading">*Confirm Aston Email</label>
+    <input type="email" placeholder="Confirm your Email" class="text-input" required id="confirm-email">
+  </fieldset>
+
+  <!--enter age part optional-->
+  <fieldset>
+    <label class="subheading">*Phone number</label>
+    <input type="number" placeholder="Enter your Phone number" class="text-input" required>
+  </fieldset>
+  <fieldset >
+
+    <!--select preferred contact -->
+    <label class="subheading">select the preferred way of contact</label>
+    <label class="radio-text"><input name="preference" type="radio" class="radio-circle" checked>Email</label> <br>
+    <label class="radio-text"><input name="preference" type="radio" class="radio-circle">Phone number</label> <br> 
+  </fieldset>
+
+  <fieldset >
+    <!--booking date part-->
+    <label class="subheading">*what day would you like to book?</label>
+    <input type="date" class="text-input" required id="booking-date">
+  </fieldset>
+  <!--user can give feedback through comments-->
+  <label id="comment">comments and suggestions to help us improve</label>
+  <textarea type="text" id="text-paragraph" placeholder="Enter your text here..."></textarea>
+  <fieldset>
+
+  </fieldset>
+
+  <!--submit button-->
+  <input type="submit" name="Submit" id="submit" href="mailto:someone@example.com">
+</form></div></main>
+</body>
+</html>

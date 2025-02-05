@@ -1,0 +1,522 @@
+/*
+-------------------------------------------------------------------------
+MANDATORY TAGS/TASKS:
+• You must use the following HTML tags: (a), (blockquote), (em), (footer), (form), 
+(header), (img), (input), (label), (li), (link), (main), (mailto), (nav), (p), (section), (ul). 
+
+• You must use the following HTML tag properties: (id), (class), (href), (rel), (type), (alt) 
+
+• You must use the following id / class names: (main-header), (title), (description),
+ (serving-size), (ingredient), (ingredient-list), (instructions),
+ (cooking-step), (recipe), (recipes).
+
+ • You must use the following CSS styles: (align-items), (background-color), 
+(border), (display), (flex-wrap), (font-family), (height), (justify-content), (margin),
+ (padding), (text-align), (width). 
+
+ • You must implement the following JavaScript functions: validateForm, 
+checkEmails, checkDate. 
+========================================================================
+CHECKLIST:
+
+• Provide a consistent navigation bar on each page. 
+
+• Use F pattern and Visual Hierarchy. 
+
+• Use Icons, Logos and Images where appropriate. 
+
+• You must use HTML, CSS, and JS. 
+
+• Provide a consistent navigation bar on each page. 
+
+• Use F pattern and Visual Hierarchy.
+
+• Use Icons, logos and images where appropriate.
+
+• Use HTML IDs, classes and other appropriate tags as specified.
+
+• You should adhere to good coding practices and use comments properly.
+
+• Do not use absolute file references for HTML, CSS & JS files
+======================================================================
+*/
+
+
+
+/*removes default hyperlink colour and underlining*/
+
+* {
+    text-decoration: none;
+   
+}
+
+/*navbar decides the overall structure of the navigation menu*/
+.navbar {
+background-color: rgb(1, 86, 140);
+padding-right: 15px;
+padding-left: 15px;
+margin: 0px;
+flex-wrap: nowrap;
+}
+
+/*navdiv decides how the menu options are spaced out*/
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*decides how the logo is represented*/
+.title {
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+}
+
+/*decides the list structure*/
+ .navdiv li {
+    list-style: none;
+    display: inline-block;
+}
+
+/*an anchor within the list characteristics decided here*/
+.navdiv li a{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+/*causes changes overall everywhere*/
+body {
+    margin: 0px;
+    font-family: calibri;
+}
+
+#noscroll {
+    overflow:hidden;
+}
+
+/*header design*/
+.main-header {
+    background-color: rgb(205, 205, 205);
+    width: 100%;
+    margin: 0px;
+}
+/*p header design*/
+.main-header p {
+    color: rgb(1, 86, 140);
+    padding: 5px;
+    font-weight: 500;
+    margin: 1px;
+}
+/*a hover characteristic design*/
+li a:hover {
+    color: rgb(76, 130, 163);
+}
+/*it will show on nav menu clearly what current page is*/
+#currentPage {
+    background-color:rgba(6, 133, 212, 0.4) ;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+}
+
+#margin-top {
+    margin-top: 10px;
+}
+/*container for descriptions of things*/
+.paragraph {
+   background-color: rgba(247, 242, 242, 0.372);
+   border-top-color: rgb(1, 86, 140);
+   border-top-style: solid ;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-right: 0px;
+   margin-top: 0px;
+   height: auto;
+}
+/*business description design*/
+.business {
+    width: 400px ;  
+    margin: 0px;
+    font-size: 15px;  
+}
+/*all body content that is not to do with the nav menu design*/
+#homepage main {
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+/*fusion kitchen name design*/
+#Name {
+    font-weight: bold;
+    font-size: 20px;
+}
+/*kitchen image design*/
+#kitchen {
+   
+    height: 280px;
+    width: auto;
+    vertical-align: top; 
+    margin-left: 0px;
+    opacity: 90%;
+}
+/*details design in the dscription container cebters text*/
+.details {
+    width: 305px;
+    height: auto;
+    vertical-align: top; 
+    font-size:15px ;
+    text-align: center;
+}
+/*all pre elements in description*/
+.paragraph pre {
+    margin: 0px;
+    font-family: calibri;
+    padding-bottom: 26px;
+}
+/*centers details in the middle vertically*/
+.details pre, .details p {
+    transform: translate(0px, 30px);
+}
+/*icons such as home recipe and contact design*/
+.icon {
+    width: 20px;
+    height: auto;
+    padding-right: 5px;
+}
+/*this is the overall design of the row*/
+.row {
+    display: flex;
+    flex: 1;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    min-width: 100%;
+    justify-content: center;
+    
+}
+/*food showcase with image and description design*/
+.showcase {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    margin-right: 5px;
+
+   
+}
+    
+/*image in showcase design*/
+.showcase img{
+    height: 245px;
+    opacity: 90%;
+    display: block;
+    width: 100%;
+    width: 243px;
+
+}
+/*paragraph elemnt design in showcase*/
+.showcase p {
+    position: relative;
+    transform: translate(0px, -130px); /* Perfect centering */
+    color: black;
+    background: rgba(205, 205, 205, 0.911);; /* Adds a semi-transparent background */
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 110px;
+    margin: 0px;
+    width:203px;
+    font-size: small;
+}
+/*design for bolded words in business*/
+.business strong {
+    color:rgb(76, 130, 163);
+}
+/*design for bolded words in details*/
+.details strong {
+    font-size: 17px ;
+}
+/*design of the structure of the form holding the queries*/
+#contact-form {
+    background-color: rgba(40, 39, 70, 0.936);
+    width:100%;
+    height:135vh;
+    padding: 40px 30px;
+    border-radius: 10px;
+z-index: 1;
+position: relative; /* Ensures it appears above overlay */
+
+}
+/*decides how the background of the website below the nav bar will look*/
+#contact-background {
+    background-image: url(images/chefs.jpg);
+    position: relative;
+    background-position: center; 
+    background-size: cover;
+    padding-right: 300px;
+    padding-left: 300px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+/*allows for color overlay*/
+#contact-background::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(115, 115, 188, 0.797); 
+    z-index: 0; 
+}
+/*get rid of default border for fieldset*/
+fieldset {
+    border-style: hidden;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+/*customisable subheading or aka the questions*/
+.subheading {
+    color: white;
+    font-size: 23px;
+    display: block;
+    padding-bottom: 5px;
+}
+/*this decides how big the input boxes are*/
+.text-input {
+    width:96%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: hidden;
+}
+/*the title of the form is customisable*/
+#title {
+    padding-left: 30px;
+    position: relative;
+color: white;
+z-index: 1;
+text-align: center;
+font-weight: bold;
+font-size: 35px;
+margin:0px;
+}
+/*customisable briefing of what the survey does*/
+#briefing {
+    padding-left: 30px;
+    position: relative;
+color: white;
+z-index: 1;
+text-align: center;
+font-size: 20px;
+margin-top: 0px;
+margin-bottom: 30px;
+text-shadow:black 1px 1px;
+
+
+}
+/*when you click on an input or textarea the focus element is customised */
+input:focus, textarea:focus {
+    border-color: rgb(115, 115, 188); /* Change border color */
+    outline: none; /* Removes default blue outline */
+    box-shadow: 0 0 5px rgba(115, 115, 188, 0.5); /* Optional: Adds glow effect */
+}
+
+/*customises the submit button*/
+#submit {
+    background-color: rgb(55, 175, 101);
+    width: 96%;
+    height: 50px;
+    border-style: hidden;
+    border-radius: 2px;
+    margin-top: 25px;
+    margin-left: 10px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: Calibri;
+    font-weight: 400;
+    cursor: pointer;
+}
+/*goes lighter when you hover over it*/
+#submit:hover {
+    background-color: rgb(66, 205, 120) ;
+}
+/*goes even more lighter when you click it*/
+#submit:active {
+    background-color: rgb(72, 234, 134);
+}
+
+/*customises the text to te right of the radio button*/
+.radio-text {
+    color: white;
+    font-size: 22px;
+    font-family: calibri;
+}
+
+/*customises the radio circle*/
+.radio-circle {
+    width:20px;
+    height: 20px;
+    margin-right: 10px;
+}
+/*customises the textarea*/
+#text-paragraph {
+    width:93%;
+    font-size: 16px;
+    padding: 10px;
+    border-style: hidden;
+    height: 100px;
+    text-align: start;
+    margin-left: 10px;
+    resize: none;
+}
+/*styles the textarea label*/
+#comment {
+    color: white;
+    font-size: 23px;
+    display: block;
+    padding-bottom: 5px;
+    margin-left: 7px;
+}
+/*gives a back ground behind the recipe menu*/
+#recipe-background {
+    background-image: url(images/squiggle.webp);
+    width: auto;
+    height: 552vh;
+    background-position: center; 
+    background-size: contain;
+    padding: 50px 80px;
+}
+/*gives some more padding to the top of the menu*/
+#padding-top-recipe {
+    padding-top: 30px;
+}
+/*contains the recipes*/
+.recipes {
+    background-color: bisque;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-inline: 10px;
+}
+/*is the actual recipe container structure containing main description image and description */
+.recipe {
+    display:flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    min-width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+/*contains the instructions and ingredients */
+.main-description {
+    border-right-style:solid ;
+    border-top-style:solid ;
+    width:70%;
+    border-bottom-style:solid ;
+    border-bottom-color:rgb(167, 87, 22);
+}
+/*contains the other information about the recipe*/
+.description {
+    border-left-style:solid ;
+    border-bottom-style:solid ;
+    border-right-style:solid ;
+    width:89.2%;
+    text-align: center;
+    background-color: rgb(202, 127, 70);
+
+}
+/*image of what your making in the recipe*/
+.recipe-image {
+    width: 210px;
+    height: 210px;
+    
+}
+/*allows for a flex display to help put instructions and ingredients in a row*/
+.ingredient-intruction-container {
+    display: flex;
+    background-color: rgb(202, 127, 70);
+    padding-bottom: 2px;
+}
+/*contains the ingredients*/
+.ingredient-container {
+    border-right-style:dashed;
+    border-right-color: rgb(167, 87, 22);
+    margin-top: 4px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+/*contains the instructions*/
+.instruction-container {
+padding-left: 10px;
+}
+/*design for the footer at the bottom */ 
+footer {
+    background-color:rgb(1, 86, 140);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    font-family: calibri;
+    font-size: 17px;
+}
+/*interactive design for an anchor*/ 
+footer a:visited, footer a:hover {
+     color:rgb(8, 108, 171) ;
+}
+/*ineractiive design for an anchor*/
+footer a:hover {
+   color:rgb(12, 161, 253);
+}
+
+/*serving size design*/
+.serving-size {
+font-weight: bold;
+font-size: 20px;
+}
+/*ingredient design*/
+.ingredient {
+font-style: italic;
+}
+/*the design for the ingredient list label*/
+.ingredient-list {
+font-size: 15px;
+font-weight: bold;
+}
+/*the design for the instruction list label*/
+.instructions {
+font-weight: bold;
+}
+/*design for the cooking step*/
+.cooking-step {
+font-style:oblique;
+}
+/*design for the quote*/
+blockquote {
+    font-weight: bold;
+    margin-top: 0px;
+}
+/*design for the anchor*/
+footer a {
+    text-decoration: underline;
+}
+/*design for equipment title*/
+.equipment {
+    font-weight: bold;
+}
+/*design for the tools list*/
+.tool {
+    padding-right: 90px;
+    padding-left: 90px;
+}
+/*design for the name of the recipe*/
+.name {
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+/*extra spacing for the description of the recipe on the right and left*/
+.right-left-padding {
+    padding-right: 50px;
+    padding-left: 50px;
+}
