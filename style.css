@@ -866,6 +866,7 @@ font-style: oblique;
  .about-info img {
     width: 30%;
     min-width: 288px;
+    object-fit: contain;
  }
 
  .about-info p {
@@ -890,7 +891,7 @@ font-style: oblique;
     font-weight: bold;
  }
 
- @media screen and (min-width: 1800px) {  
+ @media screen and (min-width: 1647px) {  
     #about-us h2 {
         font-size: 9rem ; 
     }    
@@ -900,4 +901,18 @@ font-style: oblique;
      }
     #signature-recipes h2 {
         font-size: 9rem ; 
-    } }
+    } 
+.about-info img{
+    min-width: 514px;
+}}
+
+    @media screen and (max-width: 900px) { 
+        .about-info p {
+            width:80%;
+        }
+        .about-info img {
+            width:80%;
+            max-width: 376px;
+          
+        }
+    }
