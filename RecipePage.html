@@ -16,8 +16,9 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body id="recipe-page">
     <!--navigation menu allow for constant simple navigation throughout the pages-->
     <nav class="navbar">
         <div class="navdiv">
@@ -31,278 +32,692 @@
   <header class=" main-header">
     <p>Recipe</p>
   </header>
-
-  <!--overall background-->
-<main id="recipe-background">
-
-  <!--curry recipe-->
-  <div class="recipes">
-    
-    <!--design of structure each section is a recipe with an image ingredient-insttruction container has display flex so instruction and ingredients are side by side-->
-<p class="name" id="curry">Curry</p>
-<section class="recipe" id="padding-top-recipe"> 
-  <img src="images/curry.jpg" class="recipe-image">
-  <div class="main-description">
-    <div class="ingredient-intruction-container">
-      <div class="ingredient-container">
-      <p class="ingredient-list">Ingredients:</p>
-      
-      <!--ingredient list for curry-->
-      <ul class="ingredient">
-       <li>500g chicken (or tofu for a vegetarian option)</li>
-        <li>2 tbsp oil (vegetable or coconut oil)</li>
-        <li>1 onion, finely chopped</li>
-        <li>3 cloves garlic, minced</li>
-        <li>1 tsp turmeric powder</li>
-        <li>2 tsp garam masala</li>
-        <li>1 cup coconut milk</li>
-      </ul>
-    </div>
-    <!--instrutions for curry-->
-    <div class="instruction-container">
-      <p class="instructions">Instructions:</p>
-<ol class="cooking-step">
-  <li>Heat oil in a pan over medium heat.</li>
-  <li>Add chopped onions and sauté until golden brown.</li>
-  <li>Stir in minced garlic and cook for 1-2 minutes.</li>
-  <li>Mix in turmeric and garam masala, stirring well.</li>
-  <li>Add chicken (or tofu) and cook until lightly browned.</li>
-  <li>Pour in coconut milk and simmer for 20 minutes.</li>
-  <li>Garnish with fresh cilantro and serve hot.</li>
-</ol>
-    </div>
-    </div>
+ <main >
+<div class="recipes" id="curry">
+  <section class="recipe">
+    <img src="images/curry.jpg" alt="a picture of curry" class="img recipe-hero-img">
+    <article>
+      <h2>Curry</h2>
+      <p class="description">Curry is a rich and aromatic dish made with a blend of spices, herbs, and ingredients like meat, vegetables, or legumes. Originating from South Asian cuisine, it has evolved into various regional styles, including Indian, Thai, and Japanese curries. Typically prepared with a sauce or gravy, it can be mild, spicy, or creamy, depending on the spices and base ingredients used.
+      </p>
+  <div class="recipe-icons">
+    <article>
+      <i class="fas fa-clock"></i>
+      <h5>prep time</h5>
+      <p>30 min</p>
+    </article>
+    <article>
+      <i class="far fa-clock"></i>
+      <h5>cook time</h5>
+      <p>15 min</p>
+    </article>
+    <article>
+      <i class="fas fa-user"></i>
+      <h5>servings</h5>
+      <p class="servng-size">6 servings</p>
+    </article>
   </div>
-  <!--description for curry-->
-  <div class="description">
-    <p class="serving-size">4 servings</p>
-    <p><strong>Description:</strong></p>
-   <p class="right-left-padding">Curry is a flavorful dish made with a blend of spices, herbs, and ingredients like meat or vegetables, cooked in a rich sauce. Popular in Indian, Thai, and other cuisines, it varies in taste, from mild to spicy, and is often served with rice or bread.</p>
-    <p class="equipment">Equipment:</p>
-    <p class="tool">Pan or Skillet, Knife, Chopping Board, Spoon or Spatula, Measuring Spoons, Measuring Cup, Lid, Serving Plate or Bowl, Optional: Cilantro Chopping Tools.</p>
-    <pre><strong>Prep Time:</strong>
-10 - 15 minutes</pre>
-      <pre><strong>Cook Time:</strong>
-25 - 30 minutes
-      </pre>
-    <blockquote>John - "The curry was rich, flavorful, and had the perfect balance of spices!"</blockquote>
-  </div>
-</section>
+    </article>
+  </section>
+  <section class="recipe-content">
+    <article>
+      <h4 class="instructions">instructions</h4>
+      <div class="cooking-step">
+        <header>
+          <p>step 1</p>
+          <div></div>
+        </header>
+        <p>
+          Heat Oil & Sauté Aromatics – Heat oil or butter in a pan and sauté chopped onions, garlic, and ginger until golden brown.
+        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 2</p>
+          <div></div>
+        </header>
+        <p>
+          Add Spices – Stir in spices like turmeric, cumin, coriander, garam masala, and chili powder to release their flavors.        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 3</p>
+          <div></div>
+        </header>
+        <p>
+          Cook the Protein or Vegetables – Add meat, tofu, or vegetables and cook until slightly browned.        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 4</p>
+          <div></div>
+        </header>
+        <p>
+          Add Tomatoes or Paste – Mix in chopped tomatoes or tomato paste for depth and richness. Cook until they break down.
+        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 5</p>
+          <div></div>
+        </header>
+        <p>
+          Pour in Liquid – Add water, coconut milk, or broth to create the curry sauce. Let it simmer.        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 6</p>
+          <div></div>
+        </header>
+        <p>
+          Season & Simmer – Add salt, pepper, and other seasonings. Let everything cook together until flavors meld.        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 7</p>
+          <div></div>
+        </header>
+        <p>
+          Garnish & Serve – Finish with fresh herbs (like cilantro) and serve with rice or bread. Enjoy!        </p>
+      </div>
+    </article>
+    <article class="ingredient-list">
+<div>
+  <h4>ingredients</h4>
+  <p class="ingredient">Oil (2 tbsp)
+  </p>
+  <p class="ingredient">Onion (1 large)
+  </p>
+  <p class="ingredient">Garlic (3 cloves)
+  </p>
+  <p class="ingredient">Ginger (1-inch)
+  </p>
+  <p class="ingredient">Turmeric (1 tsp)
+  </p>
+  <p class="ingredient">Garam Masala (1 tsp)
+  </p>
+  <p class="ingredient">chicken (500g)
+  </p>
+</div>
+<div>
+  <h4>tools</h4>
+  <p class="equipment">Pan or pot</p>
+  <p class="equipment">Knife</p>
+  <p class="equipment">Cutting board</p>
+  <p class="equipment">Stirring spoon</p>
+  <p class="equipment">Measuring spoons</p>
+  <p class="equipment">Grater</p>
+  <p class="equipment">Bowl</p>
+</div>
+    </article>
+  </section>
 
-<!--pizza recipe-->
-<p class="name" id="pizza">Pizza</p><br><br>
-    <!--design of structure each section is a recipe with an image ingredient-insttruction container has display flex so instruction and ingredients are side by side-->
-<section class="recipe">
-  <img src="images/pizza.jpg" class="recipe-image">
-  <div class="main-description">
-    <div class="ingredient-intruction-container">
-      <div class="ingredient-container">
-      <p class="ingredient-list">Ingredients:</p>
 
-      <!--ingredient list for pizza-->
-      <ul class="ingredient">
-        <li>2 cups all-purpose flour</li>
-        <li>1 packet (7g) dry yeast</li>
-        <li>1/2 cup warm water</li>
-        <li>1/2 cup tomato sauce</li>
-        <li>1 cup mozzarella cheese</li>
-        <li>1/2 tsp salt</li>
-        <li>1 tbsp olive oil</li>
-      </ul>
-    </div>
-    <div class="instruction-container">
-      <p class="instructions">Instructions:</p>
-      
-      <!--instruction list for pizza-->
-<ol class="cooking-step">
- <li>In a bowl, mix warm water and yeast, then let it sit for 5 minutes.</li>
-    <li>Add flour, salt, and olive oil, then knead into a smooth dough.</li>
-    <li>Cover and let the dough rise for about an hour until it doubles in size.</li>
-    <li>Preheat the oven to 220°C (425°F) and roll out the dough into a circle.</li>
-    <li>Spread tomato sauce evenly over the dough.</li>
-    <li>Sprinkle mozzarella cheese and add your favorite toppings.</li>
-    <li>Bake for 12-15 minutes until golden and crispy, then serve hot!</li>
-</ol>
-    </div>
-    </div>
+  <section class="recipe" id="taco">
+    <img src="images/Taco.jpg" alt="a picture of a taco" class="img recipe-hero-img">
+    <article>
+      <h2>Taco</h2>
+      <p class="description">A taco is a popular Mexican dish made with a soft or crispy tortilla filled with a variety of ingredients, such as seasoned meat, beans, cheese, and vegetables. It is often topped with fresh garnishes like cilantro, onions, salsa, and lime for extra flavor. Tacos come in many styles, including street tacos, fish tacos, and barbacoa, each with unique regional flavors. They can be enjoyed as a quick snack or a full meal, making them a versatile and beloved dish worldwide.
+      </p>
+  <div class="recipe-icons">
+    <article>
+      <i class="fas fa-clock"></i>
+      <h5>prep time</h5>
+      <p>40 min</p>
+    </article>
+    <article>
+      <i class="far fa-clock"></i>
+      <h5>cook time</h5>
+      <p>20 min</p>
+    </article>
+    <article>
+      <i class="fas fa-user"></i>
+      <h5>servings</h5>
+      <p class="servng-size">8 servings</p>
+    </article>
   </div>
-  <!--description for pizza-->
-  <div class="description">
-    <p class="serving-size">2 - 4 servings</p>
-    <p><strong>Description:</strong></p>
-    <p class="right-left-padding">Pizza is a popular Italian dish consisting of a baked dough base topped with tomato sauce, cheese, and various toppings like vegetables, meats, and herbs. It comes in many styles, from thin and crispy to thick and cheesy, and is enjoyed worldwide.</p>
-    <p class="equipment">Equipment:</p>
-    <p class="tool">Bowl, Spoon, Rolling Pin, Oven, Baking Sheet, Knife (for toppings), Pizza Cutter (optional), Measuring Cups, Measuring Spoons.</p>
-    <pre><strong>Prep Time:</strong>
-15 - 20 minutes</pre>
-      <pre><strong>Cook Time:</strong>
-12 - 15 minutes
-      </pre>
-    <blockquote>Mike - "The pizza was perfectly crispy, cheesy, and full of flavor—absolutely delicious!"</blockquote>
-  </div>
-</section>
+    </article>
+  </section>
+  <section class="recipe-content">
+    <article>
+      <h4 class="instructions">instructions</h4>
+      <div class="cooking-step">
+        <header>
+          <p>step 1</p>
+          <div></div>
+        </header>
+        <p>
+          Prepare the Filling – Cook your choice of meat (beef, chicken, pork, or fish) with seasoning, or use beans for a vegetarian option.
+        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 2</p>
+          <div></div>
+        </header>
+        <p>
+          Warm the Tortillas – Heat corn or flour tortillas on a pan, grill, or directly over a flame for a slight char.     
+        </p>  </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 3</p>
+          <div></div>
+        </header>
+        <p>
+          Prepare Toppings – Chop onions, cilantro, lettuce, tomatoes, or other fresh ingredients.     
+        </p>  </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 4</p>
+          <div></div>
+        </header>
+        <p>
+          Make the Sauce – Prepare salsa, guacamole, or a creamy sauce for extra flavor.
+        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 5</p>
+          <div></div>
+        </header>
+        <p>
+          Assemble the Tacos – Place the cooked filling onto the tortillas and add toppings.        
+        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 6</p>
+          <div></div>
+        </header>
+        <p>
+          Garnish & Season – Squeeze fresh lime, sprinkle cheese, and add a final touch of seasoning.
+        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 7</p>
+          <div></div>
+        </header>
+        <p>
+          Serve & Enjoy – Serve warm and enjoy with sides like rice, beans, or chips!
+        </p>
+      </div>
+    </article>
+    <article class="ingredient-list">
+<div>
+  <h4>ingredients</h4>
+  <p class="ingredient">
+    Tortillas – 8 small corn or flour tortillas
+  </p>
+  <p class="ingredient">
+    Protein – 500g (1 lb) cooked beef, chicken, pork, fish, or beans
+  </p>
+  <p class="ingredient">
+    Onion – 1 small onion, finely chopped
+  </p>
+  <p class="ingredient">
+    Cilantro – ¼ cup, chopped
+  </p>
+  <p class="ingredient">
+    Lime – 2 limes, cut into wedges
+  </p>
+  <p class="ingredient">
+    Cheese – ½ cup, crumbled or shredded  </p>
+  <p class="ingredient">
+    Salsa – ½ cup (red or green)
+  </p>
+</div>
+<div>
+  <h4>tools</h4>
+  <p class="equipment">
+    Pan or grill
+  </p>
+  <p class="equipment">
+    Knife
+  </p>
+  <p class="equipment">
+    Cutting board 
+  </p>
+  <p class="equipment">
+    Tongs  </p>
+  <p class="equipment">
+    Mixing bowl
+  </p>  
+  <p class="equipment">
+    Spoon
+  </p>
+  <p class="equipment">
+    Plate
+  </p>
+</div>
+    </article>
+  </section>
 
-<!--cheesecake recipe-->
-<p class="name" id="cheesecake">Cheesecake</p><br><br>
-    <!--design of structure each section is a recipe with an image ingredient-insttruction container has display flex so instruction and ingredients are side by side-->
-<section class="recipe">
-  <img src="images/cheesecake.jpg" class="recipe-image">
-  <div class="main-description">
-    <div class="ingredient-intruction-container">
-      <div class="ingredient-container">
-      <p class="ingredient-list">Ingredients:</p>
-      
-      <!--ingredient list for cheesecake-->
-      <ul class="ingredient">
-        <li>2 cups crushed graham crackers</li>
-        <li>1/2 cup melted butter</li>
-        <li>2 cups cream cheese, softened</li>
-        <li>1 cup sugar</li>
-        <li>1 tsp vanilla extract</li>
-        <li>2 eggs</li>
-        <li>1/2 cup sour cream</li>
-      </ul>
-    </div>
-    <div class="instruction-container">
-      <p class="instructions">Instructions:</p>
 
-      <!--instructions list for cheesecake-->
-<ol class="cooking-step">
-  <li>Preheat oven to 325°F (163°C).</li>
-<li>Mix 2 cups graham crackers and 1/2 cup melted butter.</li>
-<li>Press mixture into a greased 9-inch pan. Bake for 10 minutes.</li>
-<li>Beat 2 cups cream cheese and 1 cup sugar until smooth.</li>
-<li>Add 1 tsp vanilla extract and mix.</li>
-<li>Add 2 eggs, one at a time, mixing after each.</li>
-<li>Stir in 1/2 cup sour cream, pour into crust, bake for 45-50 minutes.</li>
-</ol>
-    </div>
-    </div>
+  <section class="recipe" id="cheesecake">
+    <img src="images/cheesecake.jpg" alt="a picture of a taco" class="img recipe-hero-img">
+    <article>
+      <h2>Cheesecake</h2>
+      <p class="description">
+        Cheesecake is a rich and creamy dessert made with a smooth cheese-based filling, typically cream cheese, eggs, and sugar, on a crumbly crust, often made of crushed cookies or graham crackers. It can be baked or no-bake and comes in various flavors, topped with fruits, sauces, or whipped cream.      </p>
+  <div class="recipe-icons">
+    <article>
+      <i class="fas fa-clock"></i>
+      <h5>prep time</h5>
+      <p>10 min</p>
+    </article>
+    <article>
+      <i class="far fa-clock"></i>
+      <h5>cook time</h5>
+      <p>60 min</p>
+    </article>
+    <article>
+      <i class="fas fa-user"></i>
+      <h5>servings</h5>
+      <p class="servng-size">12 servings</p>
+    </article>
   </div>
-  <!--description for cheesecake-->
-  <div class="description"> 
-    <p class="serving-size">8 - 10 servings</p>
-    <p><strong>Description:</strong></p>
-    <p class="right-left-padding">Cheesecake is a rich and creamy dessert made with a smooth cheese-based filling, typically cream cheese, on a buttery graham cracker or pastry crust. It can be baked or no-bake and often comes in various flavors, topped with fruit, chocolate, or caramel.</p>
-    <p class="equipment">Equipment:</p>
-    <p class="tool">9-inch Pan, Mixing Bowl, Measuring Cups, Measuring Spoons, Hand Mixer or Stand Mixer, Spoon or Spatula, Oven, Cooling Rack.</p>
-    <pre><strong>Prep Time:</strong>
-15 - 20 minutes</pre>
-      <pre><strong>Cook Time:</strong>
-45 - 50 minutes
-      </pre>    
-    <blockquote>Sarah - "Absolutely delicious! The perfect balance of creamy and crunchy."</blockquote>
-  </div>
-</section>
+    </article>
+  </section>
+  <section class="recipe-content">
+    <article>
+      <h4 class="instructions">instructions</h4>
+      <div class="cooking-step">
+        <header>
+          <p>step 1</p>
+          <div></div>
+        </header>
+        <p>
+Prepare the Crust – Crush cookies or graham crackers and mix with melted butter.        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 2</p>
+          <div></div>
+        </header>
+        <p>
+          Press the Crust – Firmly press the mixture into a pan and chill or bake it.        </p> 
+        </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 3</p>
+          <div></div>
+        </header>
+        <p>
+          Make the Filling – Beat cream cheese, sugar, eggs, and vanilla until smooth.
+        </p> 
+        </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 4</p>
+          <div></div>
+        </header>
+        <p>
+          Pour the Filling – Spread the mixture evenly over the crust.
+        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 5</p>
+          <div></div>
+        </header>
+        <p>
+          Bake or Chill – Bake in the oven or refrigerate for a no-bake version.
+        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 6</p>
+          <div></div>
+        </header>
+        <p>
+          Cool Completely – Let it cool at room temperature, then chill in the fridge.
+        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 7</p>
+          <div></div>
+        </header>
+        <p>
+          Add Toppings & Serve – Garnish with fruit, sauce, or whipped cream before serving.
+        </p>
+      </div>
+    </article>
+    <article class="ingredient-list">
+<div>
+  <h4>ingredients</h4>
+  <p class="ingredient">
+    Cream cheese – 500g (2 cups)
+  </p>
+  <p class="ingredient">
+    Sugar – ¾ cup
+  </p>
+  <p class="ingredient">
+    Eggs – 3 large
+  </p>
+  <p class="ingredient">
+    Vanilla extract – 1 tsp
+  </p>
+  <p class="ingredient">
+    Graham crackers (or biscuits) – 1½ cups, crushed
+  </p>
+  <p class="ingredient">
+    Butter – ½ cup, melted
+    <p class="ingredient">
+      Sour cream (or heavy cream) – ½ cup
+    </p>
+</div>
+<div>
+  <h4>tools</h4>
+  <p class="equipment">
+    Springform pan  </p>
+  <p class="equipment">
+    Mixer (hand or stand)
+  </p>
+  <p class="equipment">
+    Bowl  </p>
+  <p class="equipment">
+    Measuring cups and spoons
+  </p>
+  <p class="equipment">
+    Spatula
+  </p>  
+  <p class="equipment">
+    Oven
+  </p>
+  <p class="equipment">
+    Cooling rack
+  </p>
+</div>
+    </article>
+  </section>
 
-<!--Taco recipe-->
-<p class="name" id="taco">Taco</p><br><br>
-    <!--design of structure each section is a recipe with an image ingredient-insttruction container has display flex so instruction and ingredients are side by side-->
-<section class="recipe">
-  <img src="images/Taco.jpg" class="recipe-image">
-  <div class="main-description">
-    <div class="ingredient-intruction-container">
-      <div class="ingredient-container">
-      <p class="ingredient-list">Ingredients:</p>
-      
-      <!--ingredients for taco-->
-      <ul class="ingredient">
-        <li>1 corn or flour tortilla</li>
-<li>100g seasoned meat </li>
-<li>50g beans </li>
-<li>30g shredded cheese</li>
-<li>20g diced tomatoes</li>
-<li>10g salsa</li>
-<li>5g sour cream</li>
-      </ul>
-    </div>
-    <div class="instruction-container">
-      <p class="instructions">Instructions:</p>
-      <!--instructions for taco-->
-<ol class="cooking-step">
-  <li>Cook ground beef or chicken in a pan over medium heat.</li>
-<li>Stir in taco seasoning and follow package instructions.</li>
-<li>Heat taco shells in the oven or microwave as per package directions.</li>
-<li>Shred lettuce and dice tomatoes for toppings.</li>
-<li>Shred cheese if it's not pre-shredded.</li>
-<li>Assemble tacos by filling shells with meat and toppings.</li>
-<li>Add sour cream and any other desired toppings before serving.</li>
-</ol>
-    </div>
-    </div>
-  </div>
-  <!--description for taco-->
-  <div class="description">  
-     <p class="serving-size">8 - 10 servings</p>
-    <p><strong>Description:</strong></p>
-    <p class="right-left-padding">A taco is a traditional Mexican dish consisting of a folded or rolled corn or flour tortilla filled with ingredients like seasoned meat, beans, cheese, and vegetables. It is often topped with salsa, guacamole, or sour cream and enjoyed as a handheld meal.</p>
-    <p class="equipment">Equipment:</p>
-    <p class="tool">Pan, Knife, Cutting Board, Grater (for cheese), Measuring Spoons, Spoon or Spatula, Oven or Microwave, Serving Plate or Tray.</p>
-    <pre><strong>Prep Time:</strong>
-10 - 15 minutes</pre>
-      <pre><strong>Cook Time:</strong>
-10 - 15 minutes
-      </pre>
-    <blockquote>Emily - "Simple ingredients, but so tasty! Perfect for a weeknight meal."</blockquote>
-  </div>
-</section>
 
-<!--Sushi recipe-->
-<p class="name" id="sushi">Sushi</p><br><br>
-<section class="recipe">
-      <!--design of structure each section is a recipe with an image ingredient-insttruction container has display flex so instruction and ingredients are side by side-->
-  <img src="images/sushi.jpg" class="recipe-image">
-  <div class="main-description">
-    <div class="ingredient-intruction-container">
-      <div class="ingredient-container">
-      <p class="ingredient-list">Ingredients:</p>
-      
-      <!--ingredients for sushi-->
-      <ul class="ingredient">
-        <li>2 cups sushi rice</li>
-        <li>5 sheets nori </li>
-        <li>200g fresh fish , sliced</li>
-        <li>1/2 cucumber, julienned</li>
-        <li>1 avocado, sliced</li>
-        <li>1/4 cup soy sauce</li>
-        <li>Pickled ginger </li>
-      </ul>
-    </div>
-    <div class="instruction-container">
-      <p class="instructions">Instructions:</p>
-      <!--instructions for sushi-->
-<ol class="cooking-step">
-  <li>Cook sushi rice according to package instructions and cool.</li>
-  <li>Place a sheet of nori on a bamboo sushi mat.</li>
-  <li>Spread a thin layer of sushi rice on the nori, leaving 1 inch at the top.</li>
-  <li>Place fish, cucumber, and avocado along the center of the rice.</li>
-  <li>Roll the sushi tightly using the bamboo mat, sealing the edge with water.</li>
-  <li>Slice the roll into bite-sized pieces using a sharp knife.</li>
-  <li>Serve with soy sauce and pickled ginger on the side.</li>
-</ol>
-    </div>
-    </div>
+  <section class="recipe" id="pizza">
+    <img src="images/pizza.jpg" alt="a picture of a taco" class="img recipe-hero-img">
+    <article>
+      <h2>Pizza</h2>
+      <p class="description">
+        Pizza is a popular Italian dish consisting of a round, flat dough base topped with tomato sauce, cheese, and various toppings like meats, vegetables, and herbs. It is typically baked in an oven until the crust is crispy and the cheese is melted and bubbly. There are many variations, from classic Margherita to creative, gourmet options.  </p>
+  <div class="recipe-icons">
+    <article>
+      <i class="fas fa-clock"></i>
+      <h5>prep time</h5>
+      <p>15 min</p>
+    </article>
+    <article>
+      <i class="far fa-clock"></i>
+      <h5>cook time</h5>
+      <p>45 min</p>
+    </article>
+    <article>
+      <i class="fas fa-user"></i>
+      <h5>servings</h5>
+      <p class="servng-size">14 servings</p>
+    </article>
   </div>
+    </article>
+  </section>
+  <section class="recipe-content">
+    <article>
+      <h4 class="instructions">instructions</h4>
+      <div class="cooking-step">
+        <header>
+          <p>step 1</p>
+          <div></div>
+        </header>
+        <p>
+          Prepare the Dough – Mix flour, water, yeast, salt, and oil to form a dough, then let it rise.       </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 2</p>
+          <div></div>
+        </header>
+        <p>
+          Preheat the Oven – Heat the oven to 475°F (245°C).       </p> 
+        </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 3</p>
+          <div></div>
+        </header>
+        <p>
+          Shape the Dough – Roll or stretch the dough into a round shape on a floured surface.
+        </p> 
+        </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 4</p>
+          <div></div>
+        </header>
+        <p>
+          Add Sauce – Spread a thin layer of tomato sauce over the dough.
+        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 5</p>
+          <div></div>
+        </header>
+        <p>
+          Add Toppings – Layer cheese, meats, vegetables, and any other toppings.
+        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 6</p>
+          <div></div>
+        </header>
+        <p>
+          Bake the Pizza – Place the pizza in the oven and bake for 10-15 minutes until the crust is golden and the cheese is melted.
+        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 7</p>
+          <div></div>
+        </header>
+        <p>
+          Slice & Serve – Let it cool for a couple of minutes, then slice and serve.
+        </p>
+      </div>
+    </article>
+    <article class="ingredient-list">
+<div>
+  <h4>ingredients</h4>
+  <p class="ingredient">
+    Pizza dough – 1 ball (about 250g)
+  </p>
+  <p class="ingredient">
+    Tomato sauce – ½ cup
+  </p>
+  <p class="ingredient">
+    Mozzarella cheese – 1½ cups, shredded
+  </p>
+  <p class="ingredient">
+    Pepperoni (or other meats) – ¼ cup, sliced
+  </p>
+  <p class="ingredient">
+    Bell peppers – ¼ cup, thinly sliced
+  </p>
+  <p class="ingredient">
+    Olive oil – 1 tbsp (for brushing the crust)
+    <p class="ingredient">
+      Dried oregano – 1 tsp (for seasoning) 
+    </p>
+</div>
+<div>
+  <h4>tools</h4>
+  <p class="equipment">
+    Oven  </p>
+  <p class="equipment">
+    Pizza stone or baking sheet
+  </p>
+  <p class="equipment">
+    Rolling pin </p>
+  <p class="equipment">
+    Pizza cutter or knife
+  </p>
+  <p class="equipment">
+    Mixing bowl
+  </p>  
+  <p class="equipment">
+    Spatula
+  </p>
+  <p class="equipment">
+    Measuring cups and spoons
+  </p>
+</div>
+    </article>
+  </section>
 
-  <!--descrption for sushi-->
-  <div class="description">
-    <p class="serving-size">2 - 3 servings</p>
-    <p><strong>Description:</strong></p>
-    <p class="right-left-padding">Sushi is a Japanese dish made with vinegared rice, often paired with raw or cooked seafood, vegetables, and seaweed. It comes in various forms like nigiri, maki, and sashimi and is typically served with soy sauce, wasabi, and pickled ginger.</p>
-    <p class="equipment">Equipment:</p>
-    <p class="tool">Bamboo Sushi Mat, Pot (for cooking rice), Knife, Cutting Board, Measuring Cup, Spoon, Small Bowl (for water), Plate or Serving Tray.</p>
-    <pre><strong>Prep Time:</strong>
-20 - 30 minutes</pre>
-<pre><strong>Cook Time:</strong>
-20 - 25 minutes
-</pre>
-    <blockquote>Jake - "Fresh, delicious, and surprisingly easy to make! A new favorite."</blockquote>
+
+  <section class="recipe" id="sushi">
+    <img src="images/sushi.jpg" alt="a picture of sushi" class="img recipe-hero-img">
+    <article>
+      <h2>Sushi</h2>
+      <p class="description">
+        Sushi is a traditional Japanese dish made with vinegared rice, often paired with raw or cooked seafood, vegetables, and seaweed. It comes in various forms, such as rolls (maki), nigiri (hand-pressed rice with toppings), and sashimi (sliced raw fish without rice). Sushi is typically served with soy sauce, wasabi, and pickled ginger.</p>
+    <div class="recipe-icons">
+        <article>
+      <i class="fas fa-clock"></i>
+      <h5>prep time</h5>
+      <p>5 min</p>
+    </article>
+    <article>
+      <i class="far fa-clock"></i>
+      <h5>cook time</h5>
+      <p>30 min</p>
+    </article>
+    <article>
+      <i class="fas fa-user"></i>
+      <h5>servings</h5>
+      <p class="servng-size">5 servings</p>
+    </article>
   </div>
-</section>
-
+    </article>
+  </section>
+  <section class="recipe-content">
+    <article>
+      <h4 class="instructions">instructions</h4>
+      <div class="cooking-step">
+        <header>
+          <p>step 1</p>
+          <div></div>
+        </header>
+        <p>
+          Cook the Rice – Rinse and cook sushi rice, then mix with rice vinegar, sugar, and salt.        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 2</p>
+          <div></div>
+        </header>
+        <p>
+          Prepare the Fillings – Slice fish, vegetables, or other ingredients into thin strips.
+       </p> 
+        </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 3</p>
+          <div></div>
+        </header>
+        <p>
+          Lay Out the Nori – Place a sheet of seaweed (nori) on a bamboo rolling mat.
+        </p> 
+        </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 4</p>
+          <div></div>
+        </header>
+        <p>
+          Spread the Rice – Evenly spread a thin layer of sushi rice over the nori.
+        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 5</p>
+          <div></div>
+        </header>
+        <p>
+          Add Fillings – Place fish, vegetables, or other fillings in a line near the edge.
+        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 6</p>
+          <div></div>
+        </header>
+        <p>
+          Roll the Sushi – Use the bamboo mat to tightly roll the sushi into a log.
+        </p>
+      </div>
+      <div class="cooking-step">
+        <header>
+          <p>step 7</p>
+          <div></div>
+        </header>
+        <p>
+          Slice & Serve – Cut the roll into bite-sized pieces and serve with soy sauce, wasabi, and pickled ginger.
+        </p>
+      </div>
+    </article>
+    <article class="ingredient-list">
+<div>
+  <h4>ingredients</h4>
+  <p class="ingredient">
+    Sushi rice – 2 cups (cooked)
+  </p>
+  <p class="ingredient">
+    Rice vinegar – ¼ cup
+  </p>
+  <p class="ingredient">
+    Nori (seaweed sheets) – 4 sheets
+  </p>
+  <p class="ingredient">
+    Fresh fish (salmon/tuna) or imitation crab – 200g (sliced)
+  </p>
+  <p class="ingredient">
+    Cucumber – ½, thinly sliced
+  </p>
+  <p class="ingredient">
+    Avocado – 1, sliced
+    <p class="ingredient">
+      Soy sauce – For dipping
+    </p>
+</div>
+<div>
+  <h4>tools</h4>
+  <p class="equipment">
+    Rice cooker or pot – For cooking sushi rice  </p>
+  <p class="equipment">
+    Bamboo rolling mat (makisu) – For rolling sushi
+  </p>
+  <p class="equipment">
+    Sharp knife – For slicing sushi rolls
+  </p>
+  <p class="equipment">
+    Cutting board – For preparing ingredients
+  </p>
+  <p class="equipment">
+    Mixing bowl – For seasoning the rice
+  </p>  
+  <p class="equipment">
+    Measuring cups and spoons – For accurate ingredient portions
+  </p>
+  <p class="equipment">
+    Plastic wrap – To prevent sticking while rolling
+  </p>
+</div>
+    </article>
+  </section>
 </div>
 </main>
+
 <!--bottom footer linking a page to book a private cooking session-->
-<footer>apply <a href="ContactPage.html">here</a> to book a private cooking session</footer>
+<footer id="apply">apply <a href="ContactPage.html">here</a> to book a private cooking session</footer>
 </body>
 </html>

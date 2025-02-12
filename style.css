@@ -52,11 +52,10 @@ CHECKLIST:
 
 /*navbar decides the overall structure of the navigation menu*/
 .navbar {
-background-color: rgb(1, 86, 140);
+background-color: rgb(112, 112, 112);
 padding-right: 15px;
 padding-left: 15px;
 margin: 0px;
-flex-wrap: nowrap;
 }
 
 /*navdiv decides how the menu options are spaced out*/
@@ -64,6 +63,8 @@ flex-wrap: nowrap;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    
 }
 
 /*decides how the logo is represented*/
@@ -77,6 +78,9 @@ flex-wrap: nowrap;
  .navdiv li {
     list-style: none;
     display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    white-space: nowrap;
 }
 
 /*an anchor within the list characteristics decided here*/
@@ -91,11 +95,12 @@ flex-wrap: nowrap;
 body {
     margin: 0px;
     font-family: calibri;
+    width: 100%;
+    min-width: 320px;
+    height:100%;
 }
 
-#noscroll {
-    overflow:hidden;
-}
+
 
 /*header design*/
 .main-header {
@@ -112,72 +117,74 @@ body {
 }
 /*a hover characteristic design*/
 li a:hover {
-    color: rgb(76, 130, 163);
+    color: rgb(61, 61, 61);
 }
 /*it will show on nav menu clearly what current page is*/
 #currentPage {
-    background-color:rgba(6, 133, 212, 0.4) ;
+    background-color:rgba(65, 65, 65, 0.685) ;
     padding: 10px;
     color: rgb(0, 0, 0);
 }
 
-#margin-top {
-    margin-top: 10px;
-}
 /*container for descriptions of things*/
 .paragraph {
-   background-color: rgba(247, 242, 242, 0.372);
-   border-top-color: rgb(1, 86, 140);
-   border-top-style: solid ;
+   background-color: rgb(47, 47, 47);
+   border-color: rgb(12, 125, 196);
+   border-style: solid ;
    padding-left: 10px;
    padding-right: 10px;
    margin-right: 0px;
    margin-top: 0px;
    height: auto;
+max-width: 90vw;
+box-shadow: 0 0 10px 0 rgb(12, 125, 196);
+border-radius: 5px;
 }
 /*business description design*/
 .business {
     width: 400px ;  
     margin: 0px;
     font-size: 15px;  
+    color: white;
 }
 /*all body content that is not to do with the nav menu design*/
-#homepage main {
-    margin-top: 5px;
+#homepage {
+    margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px; 
+   
 }
 /*fusion kitchen name design*/
 #Name {
     font-weight: bold;
     font-size: 20px;
 }
-/*kitchen image design*/
-#kitchen {
-   
-    height: 280px;
-    width: auto;
-    vertical-align: top; 
-    margin-left: 0px;
-    opacity: 90%;
-}
+
+
 /*details design in the dscription container cebters text*/
 .details {
-    width: 305px;
+    width: 100%;
     height: auto;
     vertical-align: top; 
     font-size:15px ;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* Vertically center */
+    color: white;
 }
 /*all pre elements in description*/
 .paragraph pre {
     margin: 0px;
     font-family: calibri;
-    padding-bottom: 26px;
 }
 /*centers details in the middle vertically*/
-.details pre, .details p {
-    transform: translate(0px, 30px);
+.details pre, .details p, blockquote, #copyright {
+    text-align: center;
+    padding: 0px;
+    line-height: 1;
 }
 /*icons such as home recipe and contact design*/
 .icon {
@@ -190,10 +197,10 @@ li a:hover {
     display: flex;
     flex: 1;
     margin-right: 0px;
-    margin-bottom: 10px;
     min-width: 100%;
     justify-content: center;
-    
+    flex-wrap: wrap;
+    gap: 10px;
 }
 /*food showcase with image and description design*/
 .showcase {
@@ -202,25 +209,27 @@ li a:hover {
     flex-direction: column;
     margin-left: 5px;
     margin-right: 5px;
-
-   
+    position: relative; /* Set parent to relative so the child can be absolutely positioned */ 
+    margin-bottom: 10px;
 }
     
 /*image in showcase design*/
 .showcase img{
+    position: relative;
     height: 245px;
     opacity: 90%;
     display: block;
     width: 100%;
     width: 243px;
+    border-radius: 5px;
 
 }
 /*paragraph elemnt design in showcase*/
 .showcase p {
-    position: relative;
+    position: absolute;
     transform: translate(0px, -130px); /* Perfect centering */
     color: black;
-    background: rgba(205, 205, 205, 0.911);; /* Adds a semi-transparent background */
+    background: rgba(190, 190, 190, 0.911);; /* Adds a semi-transparent background */
     padding: 10px 20px;
     font-size: 20px;
     font-weight: bold;
@@ -228,6 +237,9 @@ li a:hover {
     margin: 0px;
     width:203px;
     font-size: small;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
 }
 /*design for bolded words in business*/
 .business strong {
@@ -241,8 +253,9 @@ li a:hover {
 #contact-form {
     background-color: rgba(40, 39, 70, 0.936);
     width:100%;
-    height:135vh;
-    padding: 40px 30px;
+    height:auto;
+    padding: 15% 10%;
+    padding-right: 13%;
     border-radius: 10px;
 z-index: 1;
 position: relative; /* Ensures it appears above overlay */
@@ -254,10 +267,11 @@ position: relative; /* Ensures it appears above overlay */
     position: relative;
     background-position: center; 
     background-size: cover;
-    padding-right: 300px;
-    padding-left: 300px;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-right: 32%;
+    padding-left: 20%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+
 }
 /*allows for color overlay*/
 #contact-background::before {
@@ -298,6 +312,7 @@ text-align: center;
 font-weight: bold;
 font-size: 35px;
 margin:0px;
+width: 100%;
 }
 /*customisable briefing of what the survey does*/
 #briefing {
@@ -310,6 +325,7 @@ font-size: 20px;
 margin-top: 0px;
 margin-bottom: 30px;
 text-shadow:black 1px 1px;
+width: 100%;
 
 
 }
@@ -323,7 +339,7 @@ input:focus, textarea:focus {
 /*customises the submit button*/
 #submit {
     background-color: rgb(55, 175, 101);
-    width: 96%;
+    width: 98%;
     height: 50px;
     border-style: hidden;
     border-radius: 2px;
@@ -360,7 +376,7 @@ input:focus, textarea:focus {
 }
 /*customises the textarea*/
 #text-paragraph {
-    width:93%;
+    width:94%;
     font-size: 16px;
     padding: 10px;
     border-style: hidden;
@@ -377,87 +393,8 @@ input:focus, textarea:focus {
     padding-bottom: 5px;
     margin-left: 7px;
 }
-/*gives a back ground behind the recipe menu*/
-#recipe-background {
-    background-image: url(images/squiggle.webp);
-    width: auto;
-    height: 552vh;
-    background-position: center; 
-    background-size: contain;
-    padding: 50px 80px;
-}
-/*gives some more padding to the top of the menu*/
-#padding-top-recipe {
-    padding-top: 30px;
-}
-/*contains the recipes*/
-.recipes {
-    background-color: bisque;
-    padding-bottom: 20px;
-    padding-top: 10px;
-    padding-inline: 10px;
-}
-/*is the actual recipe container structure containing main description image and description */
-.recipe {
-    display:flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    min-width: 100%;
-    flex-wrap: wrap;
-    padding-bottom: 20px;
-}
-/*contains the instructions and ingredients */
-.main-description {
-    border-right-style:solid ;
-    border-top-style:solid ;
-    width:70%;
-    border-bottom-style:solid ;
-    border-bottom-color:rgb(167, 87, 22);
-}
-/*contains the other information about the recipe*/
-.description {
-    border-left-style:solid ;
-    border-bottom-style:solid ;
-    border-right-style:solid ;
-    width:89.2%;
-    text-align: center;
-    background-color: rgb(202, 127, 70);
 
-}
-/*image of what your making in the recipe*/
-.recipe-image {
-    width: 210px;
-    height: 210px;
-    
-}
-/*allows for a flex display to help put instructions and ingredients in a row*/
-.ingredient-intruction-container {
-    display: flex;
-    background-color: rgb(202, 127, 70);
-    padding-bottom: 2px;
-}
-/*contains the ingredients*/
-.ingredient-container {
-    border-right-style:dashed;
-    border-right-color: rgb(167, 87, 22);
-    margin-top: 4px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-/*contains the instructions*/
-.instruction-container {
-padding-left: 10px;
-}
-/*design for the footer at the bottom */ 
-footer {
-    background-color:rgb(1, 86, 140);
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: white;
-    font-family: calibri;
-    font-size: 17px;
-}
+
 /*interactive design for an anchor*/ 
 footer a:visited, footer a:hover {
      color:rgb(8, 108, 171) ;
@@ -467,56 +404,500 @@ footer a:hover {
    color:rgb(12, 161, 253);
 }
 
-/*serving size design*/
-.serving-size {
-font-weight: bold;
-font-size: 20px;
-}
-/*ingredient design*/
-.ingredient {
-font-style: italic;
-}
-/*the design for the ingredient list label*/
-.ingredient-list {
-font-size: 15px;
-font-weight: bold;
-}
-/*the design for the instruction list label*/
-.instructions {
-font-weight: bold;
-}
-/*design for the cooking step*/
-.cooking-step {
-font-style:oblique;
-}
-/*design for the quote*/
-blockquote {
-    font-weight: bold;
-    margin-top: 0px;
-}
-/*design for the anchor*/
+
 footer a {
     text-decoration: underline;
 }
-/*design for equipment title*/
-.equipment {
-    font-weight: bold;
+
+
+/*for smaller screens */
+@media screen and (max-width: 709px) {
+    .navdiv {
+        flex-direction:row ; 
+        align-items: flex-end;  
+        justify-content:space-around;
+        align-items: center;
+    }
+
+    .navdiv li {
+        flex-direction: column;
+        display: block;  
+        padding-right: 15px; 
+    }
+
+    .navdiv li a {
+        margin-right: 0px;
+        padding-bottom: 10px;
+    }
+    
 }
-/*design for the tools list*/
-.tool {
-    padding-right: 90px;
-    padding-left: 90px;
+
+@media screen and (min-height: 716px) {
+    #homepage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        min-height: 100vh; 
+        margin: 0;
+       
+       
+
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        flex-grow: 1; 
+    }
+
+    .paragraph, .showcase {
+        margin: 10px;
+        padding: 10px;
+    }
+    
+   
 }
-/*design for the name of the recipe*/
-.name {
-    font-weight: bold;
-    font-size: 35px;
+@media screen and (max-width: 629px) {
+
+    /*customises the textarea*/
+    #text-paragraph {
+        width:87%;
+    }
+    #contact-background {
+    padding-left: 2%;
+    padding-right: 20%;
+    }
+}
+
+#email-button {
+    background-color: rgb(55, 175, 101);
+    margin: 10px 33%;
+    border-style: solid;
+    width:40%;
+    height:25%;
+    border-color: rgb(20, 122, 88);
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#email-button:hover {
+    background-color: rgb(66, 205, 120) ;
+}
+/*goes even more lighter when you click it*/
+#email-button:active {
+    background-color: rgb(72, 234, 134);
+}
+
+@media screen and (max-width: 746px) {
+.title {
+font-size: 17px;
+
+    }
+
+        .navdiv li a{
+font-size: 15px;
+
+        }
+
+        .icon {
+width: 15px;
+        }
+
+        .navdiv ul {
+            display: flex;
+           }
+}
+
+@media screen and (max-width: 430px) {
+    .title {
+        font-size: 15px;
+        
+            }
+        
+                .navdiv li a{
+        font-size: 10px;
+        
+                }
+        
+                .icon {
+        width: 10px;
+                }
+        
+                
+}
+.showcase:has(img:hover) p, .showcase p:hover {
+    background-color: grey;
+}
+#details {
+    background-color: rgb(112, 112, 112);
     text-align: center;
-    padding-bottom: 0px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: white;
+    font-family: calibri;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   line-height:2px;
+   
+  
+    }
+
+    #details p {
+        font-size: 13px;
+    }
+
+    #peronal-name {
+        text-decoration: underline;
+    }
+
+
+    @media screen and (min-width: 768px) {
+        #details p {
+            font-size: 13px;
+            line-height: 1%;
+        }
+    }
+
+    @media screen and (min-width: 897px) {
+       .paragraph {
+        font-size: 17px;
+        width:80%;
+        height:auto;
+       }
+
+       #Name {
+        font-size:18px;
+    }
+    }
+
+    @media screen and (min-width: 1455px) {
+        .paragraph {
+         font-size: 22px;
+         width:auto;
+         height:20%
+        }
+
+        #Name {
+            font-size:30px;
+        }
+        .showcase img{
+            height: 275px; 
+            width: 273px;
+        
+        }
+        /*paragraph elemnt design in showcase*/
+        .showcase p {
+            
+            transform: translate(0px, -159px); 
+            
+           
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            height: 138px;
+            margin: 0px;
+            width:233px;
+            font-size: 16px;
+        }
+     }
+
+     #copyright {
+        padding-top: 4%;
+        border-top-color: rgb(172, 172, 172) ;
+        border-top-style: solid;
+        margin-left: 2%;
+        margin-right:2% ;
+     }
+
+     @media screen and (max-width: 574px) {
+        .row.food {
+            display: flex;
+            flex-wrap: nowrap; 
+            overflow-x: auto;
+            scroll-snap-type: x mandatory; 
+            gap: 10px; 
+            padding: 0; 
+            white-space: nowrap; 
+            scrollbar-width: none; 
+            position: relative; 
+            transform: none; 
+            width: 100%;
+        }
+        
+        .row.food::-webkit-scrollbar {
+            display: none; 
+        }
+        
+        .showcase {
+            flex: 0 0 auto; 
+            width: 250px; 
+            scroll-snap-align: start; 
+            text-align: center;
+        }
+        
+        .showcase p {
+            width: 100%;
+            max-width: 232px;
+            white-space: normal; 
+            word-wrap: break-word;
+            font-size: 14px;
+            padding: 5px;
+            transform: translate(0, -120px);
+        }
+        
+        .showcase:first-child {
+            margin-left: 10000px; 
+        }
+        
+        .showcase:last-child {
+            margin-right: auto; 
+        }
+        
+       
+        
+        .paragraph {
+            font-size: 18px;
+            width: auto;
+            height: auto;
+        }
+        
+        #Name {
+            font-size: 20px;
+        }
+     }
+     
+     /*
+     ==========
+     RECIPE CSS
+     ==========
+     */
+
+     
+ /*design for the footer at the bottom */ 
+#apply {
+    background-color:rgb(43, 43, 43);
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    color: white;
+    font-family: calibri;
+    font-size: 17px;
+}
+     
+.recipe {
+    display: grid;
+    gap: 3rem;
+}
+
+.recipe-hero-img {
+    height: 300px;
+    border-radius: 5px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.description{
+    color:rgb(57, 57, 57);
+line-height: 1.5rem;
+}
+.recipe-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:1rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.recipe-icon i{
+    font-size:1.5rem;
+    color: rgb(65, 65, 237);
+}
+.recipe-icons h5, .recipe-icons p {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+}
+
+.recipe-icons p {
+    color:rgb(57, 57, 57);
+}
+
+.recipe-content {
+    padding: 3rem 0;
+    display:grid;
+    gap: 2rem 5rem;
+}
+.recipes {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+}
+@media screen and (min-width: 992px) {
+    .recipe {
+        grid-template-columns: 4fr 5fr;
+        align-items: center;
+    }
+.recipe-content {
+    grid-template-columns: 2fr 1fr;
+}
+
+.recipes {
+    padding-left: 10%;
+    padding-right: 10%;
+} 
+}
+
+.cooking-step header{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+.cooking-step header p {
+    text-transform: uppercase;
+    font-weight: 600;
     margin-bottom: 0px;
+    color:rgb(65, 65, 237);
 }
-/*extra spacing for the description of the recipe on the right and left*/
-.right-left-padding {
-    padding-right: 50px;
-    padding-left: 50px;
+.cooking-step > p {
+color: rgb(104, 103, 103);
 }
+.cooking-step header div {
+    height:2px;
+    background: rgb(157, 157, 157);
+}
+
+.ingredient-list {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.ingredient {
+    border-bottom: 2px solid rgb(157, 157, 157);
+    padding-bottom: 0.75rem;
+    color: rgb(57, 57, 57);
+}
+
+.equipment {
+    border-bottom: 2px solid rgb(157, 157, 157);
+    padding-bottom: 0.75rem;
+    color:rgb(65, 65, 237);
+    text-transform: capitalize;
+}
+
+.recipe-icons i {
+    font-size: 1.5rem;
+    color: rgb(65, 65, 237);
+}
+.recipe h2 {
+    font-size: 2rem;
+}
+
+.serving-size {
+font-style: oblique;
+}
+
+@media screen and (min-width: 1800px) {
+    .paragraph {
+     font-size: 35px;
+     width:auto;
+     height:20%
+    }
+
+    #Name {
+        font-size:40px;
+    }
+    .showcase img{
+        height: 480px; 
+        width: 478px;
+    
+    }
+    /*paragraph elemnt design in showcase*/
+    .showcase p {
+        
+        transform: translate(0px, -269px); 
+        
+       
+        padding: 10px 20px;
+        font-size: 30px;
+        font-weight: bold;
+        height: 248px;
+        margin: 0px;
+        width:438px;
+        font-size: 30px;
+    }
+
+  
+ }
+
+ #recipe-page {
+    width: 100vw;
+ }
+
+ #about-us {
+    background-color: rgb(57,80,89);
+    width:100%;
+    padding: 1% 10% 5% 10%;
+    box-sizing: border-box;
+ }
+ 
+ #about-us h2 {
+    color: white;
+    text-align: center;
+    font-size: 3.5rem;
+ }
+
+ .about-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20%;
+    justify-content: center;
+ }
+
+ .about-info img {
+    width: 30%;
+    min-width: 288px;
+ }
+
+ .about-info p {
+    width: 40%;
+    color: rgb(132,153,160);
+    min-width: 286px;
+ }
+
+ #signature-recipes {
+    background-color: rgb(45,56,61);
+    width:100%;
+    padding: 5% 10% 5% 10%;
+    box-sizing: border-box;
+ }
+ #signature-recipes h2 {
+    color: white;
+    text-align: center;
+    font-size: 3.5rem;
+ }
+
+ .instructions {
+    font-weight: bold;
+ }
+
+ @media screen and (min-width: 1800px) {  
+    #about-us h2 {
+        font-size: 9rem ; 
+    }    
+
+    .about-info p {
+       font-size: 1.8rem;
+     }
+    #signature-recipes h2 {
+        font-size: 9rem ; 
+    } }

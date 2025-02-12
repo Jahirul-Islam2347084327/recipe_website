@@ -47,49 +47,51 @@ e-mail). Ensure that the e-mail is a valid Aston University e-mail and
 
   <!--this is the enter name part-->
   <fieldset>
-    <label class="subheading">*Name</label>
+    <label class="subheading">*Name:</label>
     <input type="text" placeholder="Enter your name" class="text-input" required>
   </fieldset>
 
   <!--enter email part-->
   <fieldset>
-    <label class="subheading">*Aston Email</label>
+    <label class="subheading">*Aston Email:</label>
     <input type="email" placeholder="Enter your Email" class="text-input" required id="email">
   </fieldset>
 
   <!--confirmation of email-->
   <fieldset>
-    <label class="subheading">*Confirm Aston Email</label>
+    <label class="subheading">*Confirm Aston Email:</label>
     <input type="email" placeholder="Confirm your Email" class="text-input" required id="confirm-email">
   </fieldset>
 
   <!--enter age part optional-->
   <fieldset>
-    <label class="subheading">*Phone number</label>
-    <input type="number" placeholder="Enter your Phone number" class="text-input" required>
+    <label class="subheading">*Phone number:</label>
+    <input type="tel" placeholder="Enter your Phone number" class="text-input" required>
   </fieldset>
   <fieldset >
 
     <!--select preferred contact -->
-    <label class="subheading">select the preferred way of contact</label>
+    <label class="subheading">select the preferred way of contact:</label>
     <label class="radio-text"><input name="preference" type="radio" class="radio-circle" checked>Email</label> <br>
     <label class="radio-text"><input name="preference" type="radio" class="radio-circle">Phone number</label> <br> 
   </fieldset>
 
   <fieldset >
     <!--booking date part-->
-    <label class="subheading">*what day would you like to book?</label>
+    <label class="subheading">*what day would you like to book?:</label>
     <input type="date" class="text-input" required id="booking-date">
   </fieldset>
   <!--user can give feedback through comments-->
-  <label id="comment">comments and suggestions to help us improve</label>
+  <label id="comment">comments and suggestions to help us improve:</label>
   <textarea type="text" id="text-paragraph" placeholder="Enter your text here..."></textarea>
   <fieldset>
 
   </fieldset>
 
   <!--submit button-->
-  <input type="submit" name="Submit" id="submit" href="mailto:someone@example.com">
+  <input type="submit" name="Submit" id="submit">
+  <br><br><br>
+  <button id="email-button" mailto="someon@gmail.com">Email us!</button>
 </form></div></main>
 </body>
 </html>
